@@ -1,5 +1,5 @@
 #Author: Laurens Schiefelbein
-#Version 2019-12-23
+#Version 2020-4-02
 
 import glob
 import os
@@ -7,37 +7,11 @@ import os
 #Path to your git directories. The the * represents all of your git repositories.
 #Example: "/Users/Name/gitrepositories/*"
 
-#If you have multiple directories with git repositories, use multiple lists and for-loops. (there are additional loops that are commented out).
+#If you have multiple directories with git repositories, add the paths to the array by using +=
 
 list = glob.glob ("/Users/Name/gitrepositories/*") #<--- Path to your git directory.
+#list += glob.glob ("/Users/Name/gitrepositories/*")
 
 for i in list:
 	os.chdir(i)
 	os.system('git pull')
-
-
-"""
-list1 = glob.glob ("/Users/Name/gitrepositories/*") 
-
-for i in list1:
-	os.chdir(i)
-	os.system('git pull')
-
-"""
-
-"""
-list2 = glob.glob ("/Users/Name/gitrepositories/*") 
-
-for i in list2:
-	os.chdir(i)
-	os.system('git pull')
-"""
-
-"""
-list2 = glob.glob ("/Users/Name/gitrepositories/*") 
-
-for i in list2:
-	os.chdir(i)
-	os.system('git pull')
-
-"""
